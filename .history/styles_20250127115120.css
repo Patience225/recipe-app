@@ -1,3 +1,4 @@
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,13 +7,13 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #efebe9, #d7ccc8);
+  background: linear-gradient(to right, #efebe9, #d7ccc8); /* Light coffee gradient */
   color: #4e342e;
   line-height: 1.6;
 }
 
 header {
-  background: linear-gradient(135deg, #795548, #3e2723);
+  background: linear-gradient(135deg, #795548, #3e2723); /* Dark coffee gradient */
   text-align: center;
   color: #fff;
   padding: 2rem;
@@ -32,7 +33,7 @@ header input {
   outline: none;
   width: 80%;
   max-width: 400px;
-  background: #efebe9;
+  background: #efebe9; /* Light coffee */
   color: #4e342e;
 }
 
@@ -40,15 +41,15 @@ header #theme-toggle {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   border: none;
-  background: #d7ccc8;
+  background: #d7ccc8; /* Light coffee */
   color: #3e2723;
   border-radius: 20px;
   cursor: pointer;
 }
 
 .hero {
-  background: linear-gradient(135deg, rgba(121, 85, 72, 0.9), rgba(62, 39, 35, 0.9));
-  color: #efebe9;
+  background: linear-gradient(135deg, rgba(121, 85, 72, 0.9), rgba(62, 39, 35, 0.9)); /* Blend of light and dark coffee */
+  color: #efebe9; /* Light coffee text */
   text-align: center;
   padding: 3rem 2rem;
   margin-top: -1rem;
@@ -67,7 +68,7 @@ header #theme-toggle {
 
 .hero button {
   padding: 0.8rem 1.5rem;
-  background-color: #5d4037;
+  background-color: #5d4037; /* Medium coffee */
   color: white;
   border: none;
   border-radius: 20px;
@@ -76,7 +77,7 @@ header #theme-toggle {
 }
 
 .hero button:hover {
-  background-color: #4e342e;
+  background-color: #4e342e; /* Darker tone for hover effect */
 }
 
 #categories {
@@ -87,7 +88,7 @@ header #theme-toggle {
 .category-buttons button {
   margin: 0.5rem;
   padding: 0.8rem 1.5rem;
-  background-color: #8d6e63;
+  background-color: #8d6e63; /* Light-medium coffee */
   color: white;
   border: none;
   border-radius: 20px;
@@ -95,7 +96,7 @@ header #theme-toggle {
 }
 
 .category-buttons button:hover {
-  background-color: #6d4c41;
+  background-color: #6d4c41; /* Darker coffee */
 }
 
 #recipe-list {
@@ -106,7 +107,7 @@ header #theme-toggle {
 }
 
 .recipe-card {
-  background: rgba(236, 224, 216, 0.8);
+  background: rgba(236, 224, 216, 0.8); /* Light coffee tone */
   backdrop-filter: blur(10px);
   border-radius: 15px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
@@ -123,7 +124,7 @@ header #theme-toggle {
 .recipe-card h3 {
   padding: 1rem;
   font-size: 1.2rem;
-  color: #4e342e;
+  color: #4e342e; /* Dark coffee text */
 }
 
 .recipe-card:hover {
@@ -133,18 +134,19 @@ header #theme-toggle {
 footer {
   text-align: center;
   padding: 1.5rem;
-  background: #3e2723;
+  background: #3e2723; /* Dark coffee */
   color: white;
   margin-top: 2rem;
 }
 
+/* Dark Theme Styles */
 body.dark-theme {
   background: #212121;
   color: white;
 }
 
 body.dark-theme header {
-  background: linear-gradient(135deg, #4e342e, #3e2723);
+  background: linear-gradient(135deg, #4e342e, #3e2723); /* Rich dark coffee tones */
 }
 
 body.dark-theme .hero {
@@ -152,22 +154,25 @@ body.dark-theme .hero {
 }
 
 body.dark-theme .recipe-card {
-  background: rgba(62, 39, 35, 0.8);
+  background: rgba(62, 39, 35, 0.8); /* Dark coffee */
 }
 
 body.dark-theme footer {
   background: #3e2723;
 }
 
+/* Recipe Submission Form Styles */
+/* Centralize and style the form container */
 #recipe-form-container {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* Set a maximum width for the form */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px; /* Add padding inside the container */
+  background-color: #f9f9f9; /* Optional: Set a background color for contrast */
+  border-radius: 8px; /* Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a polished look */
 }
 
+/* Add spacing for the form fields */
 #recipe-form label {
   display: block;
   margin-bottom: 8px;
@@ -177,25 +182,28 @@ body.dark-theme footer {
 #recipe-form input,
 #recipe-form select,
 #recipe-form button {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
+  width: 100%; /* Make inputs and button take up the full width of the container */
+  padding: 10px; /* Add padding inside inputs and button */
+  margin-bottom: 15px; /* Add spacing between fields */
+  border: 1px solid #ccc; /* Light border for inputs */
+  border-radius: 4px; /* Rounded corners for inputs */
+  font-size: 16px; /* Adjust font size */
 }
 
+/* Style the submit button specifically */
 #recipe-form button {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #007bff; /* Blue background */
+  color: #fff; /* White text */
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 #recipe-form button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Darker blue on hover */
 }
+
+
 
 #recipe-form {
   display: flex;
@@ -208,17 +216,17 @@ body.dark-theme footer {
 #recipe-form button {
   padding: 10px;
   font-size: 1rem;
-  border: 1px solid #d7ccc8;
+  border: 1px solid #d7ccc8; /* Light coffee border */
   border-radius: 5px;
 }
 
 #recipe-form button {
-  background-color: #6d4c41;
+  background-color: #6d4c41; /* Medium coffee */
   color: white;
   cursor: pointer;
   border: none;
 }
 
 #recipe-form button:hover {
-  background-color: #4e342e;
+  background-color: #5d4037; /* Darker coffee */
 }

@@ -10,7 +10,8 @@ const modalImage = document.getElementById("modal-image");
 const modalDescription = document.getElementById("modal-description");
 const closeModalBtn = document.querySelector(".close-btn");
 
-const recipes = [
+let recipes = [
+  const recipes = [
     {
       id: 1,
       title: "Spaghetti Carbonara",

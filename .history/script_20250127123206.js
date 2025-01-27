@@ -171,6 +171,8 @@ const displayRecipes = (recipes) => {
   });
 };
 
+
+
 const openRecipeModal = (recipe) => {
   modalTitle.textContent = recipe.title;
   modalImage.src = recipe.image;

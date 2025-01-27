@@ -171,45 +171,62 @@ const displayRecipes = (recipes) => {
   });
 };
 
-const openRecipeModal = (recipe) => {
+// Open modal with recipe details
+const modal = document.getElementById("recipe-modal");
+const closeBtn = document.querySelector(".close-btn");
+
+function openModal(recipe) {
+  const modalTitle = document.getElementById("modal-title");
+  const modalImage = document.getElementById("modal-image");
+  const modalDescription = document.getElementById("modal-description");
+
   modalTitle.textContent = recipe.title;
   modalImage.src = recipe.image;
-  modalDescription.textContent = recipe.description;
-  recipeModal.style.display = "block";
-};
+  modalDescription.textContent = A delicious recipe for ${recipe.title}. Category: ${recipe.category};
 
-closeModalBtn.addEventListener("click", () => {
-  recipeModal.style.display = "none";
+  modal.style.display = "block";
+}
+
+// Close the modal
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
 });
 
-themeToggleBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark-theme");
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
 });
 
-categoriesButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const category = button.dataset.category;
-    const filteredRecipes = category === "All" ? recipes : recipes.filter(recipe => recipe.category === category);
-    displayRecipes(filteredRecipes);
-  });
+// Add click event to recipe cards
+document.addEventListener("click", (e) => {
+  if (e.target.closest(".recipe-card")) {
+    const recipeId = e.target.closest(".recipe-card").dataset.id;
+    const recipe = recipes.find((r) => r.id == recipeId);
+    openModal(recipe);
+  }
 });
 
-searchInput.addEventListener("input", (e) => {
-  const searchTerm = e.target.value.toLowerCase();
-  const filteredRecipes = recipes.filter(recipe => recipe.title.toLowerCase().includes(searchTerm));
-  displayRecipes(filteredRecipes);
-});
+// Handle Recipe Submission
+const recipeForm = document.getElementById("recipe-form");
 
 recipeForm.addEventListener("submit", (e) => {
   e.preventDefault();
+
+  const title = document.getElementById("recipe-title").value;
+  const category = document.getElementById("recipe-category").value;
+  const image = document.getElementById("recipe-image").value;
+
   const newRecipe = {
-    title: recipeForm["recipe-title"].value,
-    category: recipeForm["recipe-category"].value,
-    image: recipeForm["recipe-image"].value,
+    id: recipes.length + 1,
+    title: title,
+    category: category,
+    image: image,
   };
+
   recipes.push(newRecipe);
   displayRecipes(recipes);
   recipeForm.reset();
 });
 
-displayRecipes(recipes);
+

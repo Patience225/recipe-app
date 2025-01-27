@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+
 const CACHE_NAME = "recipe-app-cache";
 const urlsToCache = [
   "/",

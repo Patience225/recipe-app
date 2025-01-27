@@ -171,15 +171,40 @@ const displayRecipes = (recipes) => {
   });
 };
 
-const openRecipeModal = (recipe) => {
+// Open modal with recipe details
+const modal = document.getElementById("recipe-modal");
+const closeBtn = document.querySelector(".close-btn");
+
+function openModal(recipe) {
+  const modalTitle = document.getElementById("modal-title");
+  const modalImage = document.getElementById("modal-image");
+  const modalDescription = document.getElementById("modal-description");
+
   modalTitle.textContent = recipe.title;
   modalImage.src = recipe.image;
-  modalDescription.textContent = recipe.description;
-  recipeModal.style.display = "block";
-};
+  modalDescription.textContent = A delicious recipe for ${recipe.title}. Category: ${recipe.category};
 
-closeModalBtn.addEventListener("click", () => {
-  recipeModal.style.display = "none";
+  modal.style.display = "block";
+}
+
+// Close the modal
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+// Add click event to recipe cards
+document.addEventListener("click", (e) => {
+  if (e.target.closest(".recipe-card")) {
+    const recipeId = e.target.closest(".recipe-card").dataset.id;
+    const recipe = recipes.find((r) => r.id == recipeId);
+    openModal(recipe);
+  }
 });
 
 themeToggleBtn.addEventListener("click", () => {

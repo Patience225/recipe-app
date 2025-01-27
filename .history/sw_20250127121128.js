@@ -1,3 +1,4 @@
+// sw.js - Service Worker
 const CACHE_NAME = "recipe-app-cache";
 const urlsToCache = [
   "/",
@@ -28,6 +29,42 @@ const urlsToCache = [
   "/images/Steak.jpeg", 
   "/images/Tacos.jpeg",
   "/images/Vegetable Stir-fry.jpeg",
+];
+
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(urlsToCache);
+    })
+  );
+});
+
+self.addEventListener("fetch", (event) => {
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      return response || fetch(event.request);
+    })
+  );
+});
+
+
+
+
+
+
+
+
+
+const CACHE_NAME = "recipe-app-cache";
+const urlsToCache = [
+  "/",
+  "/index.html",
+  "/styles.css",
+  "/script.js",
+  "/images/pancakes.jpg", // Add other image paths here
+  "/images/spaghetti.jpg",
+  "/images/chicken.jpg",
+  "/images/cake.jpg",
 ];
 
 self.addEventListener("install", (event) => {
