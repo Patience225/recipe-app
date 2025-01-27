@@ -8,27 +8,27 @@ const urlsToCache = [
   "/images/Avocado Toast.jpeg", 
   "/images/Burgers.jpeg",
   "/images/Burrito Bowl.jpeg",
-  "/images/Caesar Salad.jpeg", 
+  "/images/Caesar Salad.jpeg", // Add your images here
   "/images/Chicken Wraps.jpeg",
   "/images/Chocolate Cake.jpeg",
-  "/images/Churros.jpeg",
+  "/images/Churros.jpeg", // Add your images here
   "/images/Croissants.jpeg",
   "/images/French Toast.jpeg",
-  "/images/Fruit Salad.jpeg",
+  "/images/Fruit Salad.jpeg", // Add your images here
   "/images/Grilled Chicken.jpeg",
   "/images/Grilled Salmon.jpeg",
-  "/images/Ice Cream Sundae.jpeg",
+  "/images/Ice Cream Sundae.jpeg", // Add your images here
   "/images/Lobster Tail.jpeg",
   "/images/Muffins.jpeg",
-  "/images/Nachos.jpeg", 
+  "/images/Nachos.jpeg", // Add your images here
   "/images/Omelette.jpeg",
   "/images/Pancakes.jpeg",
-  "/images/Pizza.jpeg", 
+  "/images/Pizza.jpeg", // Add your images here
   "/images/Spaghetti Carbonara.jpeg",
   "/images/Smoothie Bowl.jpeg",
-  "/images/Steak.jpeg", 
+  "/images/Steak.jpeg", // Add your images here
   "/images/Tacos.jpeg",
-  "/images/Vegetable Stir-fry.jpeg",
+  "/images/Burrito Bowl.jpeg",
 ];
 
 self.addEventListener("install", (event) => {

@@ -26,7 +26,7 @@ const urlsToCache = [
   "/images/Pizza.jpeg", 
   "/images/Spaghetti Carbonara.jpeg",
   "/images/Smoothie Bowl.jpeg",
-  "/images/Steak.jpeg", 
+  "/images/Steak.jpeg", // Add your images here
   "/images/Tacos.jpeg",
   "/images/Vegetable Stir-fry.jpeg",
 ];

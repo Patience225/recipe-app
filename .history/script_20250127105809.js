@@ -120,29 +120,30 @@ const recipes = [
     category: "Breakfast",
     image: "images/Omelette.jpeg",
   },
+  // Additional 7 items
   {
     id: 21,
     title: "Burrito Bowl",
     category: "Lunch",
-    image: "images/Burrito Bowl.jpeg",
+    image: "https://source.unsplash.com/400x300/?burrito",
   },
   {
     id: 22,
     title: "Lobster Tail",
     category: "Dinner",
-    image: "images/Lobster Tail.jpeg",
+    image: "https://source.unsplash.com/400x300/?lobster",
   },
   {
     id: 23,
     title: "Nachos",
     category: "Snacks",
-    image: "images/Nachos.jpeg",
+    image: "https://source.unsplash.com/400x300/?nachos",
   },
   {
     id: 24,
     title: "French Toast",
     category: "Breakfast",
-    image: "images/French Toast.jpeg",
+    image: "https://source.unsplash.com/400x300/?frenchtoast",
   },
 ];
 
@@ -158,7 +159,9 @@ function displayRecipes(recipesToDisplay) {
     const recipeCard = `
       <div class="recipe-card" data-id="${recipe.id}">
         <img src="${recipe.image}" alt="${recipe.title}" loading="lazy">
-        <div class="card-back"> </div>
+        <div class="card-back">
+          <p>Click for details!</p>
+        </div>
         <h3>${recipe.title}</h3>
       </div>
     `;

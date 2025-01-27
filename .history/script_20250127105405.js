@@ -76,73 +76,74 @@ const recipes = [
     id: 13,
     title: "Chicken Wraps",
     category: "Lunch",
-    image: "images/Chicken Wraps.jpeg",
+    image: "https://source.unsplash.com/400x300/?wraps",
   },
   {
     id: 14,
     title: "Pizza",
     category: "Dinner",
-    image: "images/Pizza.jpeg",
+    image: "https://source.unsplash.com/400x300/?pizza",
   },
   {
     id: 15,
     title: "Churros",
     category: "Snacks",
-    image: "images/Churros.jpeg",
+    image: "https://source.unsplash.com/400x300/?churros",
   },
   {
     id: 16,
     title: "Croissants",
     category: "Breakfast",
-    image: "images/Croissants.jpeg",
+    image: "https://source.unsplash.com/400x300/?croissant",
   },
   {
     id: 17,
     title: "Vegetable Stir-fry",
     category: "Lunch",
-    image: "images/Vegetable Stir-fry.jpeg",
+    image: "https://source.unsplash.com/400x300/?stirfry",
   },
   {
     id: 18,
     title: "Steak",
     category: "Dinner",
-    image: "images/Steak.jpeg",
+    image: "https://source.unsplash.com/400x300/?steak",
   },
   {
     id: 19,
     title: "Ice Cream Sundae",
     category: "Snacks",
-    image: "images/Ice Cream Sundae.jpeg",
+    image: "https://source.unsplash.com/400x300/?icecream",
   },
   {
     id: 20,
     title: "Omelette",
     category: "Breakfast",
-    image: "images/Omelette.jpeg",
+    image: "https://source.unsplash.com/400x300/?omelette",
   },
+  // Additional 7 items
   {
     id: 21,
     title: "Burrito Bowl",
     category: "Lunch",
-    image: "images/Burrito Bowl.jpeg",
+    image: "https://source.unsplash.com/400x300/?burrito",
   },
   {
     id: 22,
     title: "Lobster Tail",
     category: "Dinner",
-    image: "images/Lobster Tail.jpeg",
+    image: "https://source.unsplash.com/400x300/?lobster",
   },
   {
     id: 23,
     title: "Nachos",
     category: "Snacks",
-    image: "images/Nachos.jpeg",
+    image: "https://source.unsplash.com/400x300/?nachos",
   },
   {
     id: 24,
     title: "French Toast",
     category: "Breakfast",
-    image: "images/French Toast.jpeg",
+    image: "https://source.unsplash.com/400x300/?frenchtoast",
   },
 ];
 
@@ -158,7 +159,9 @@ function displayRecipes(recipesToDisplay) {
     const recipeCard = `
       <div class="recipe-card" data-id="${recipe.id}">
         <img src="${recipe.image}" alt="${recipe.title}" loading="lazy">
-        <div class="card-back"> </div>
+        <div class="card-back">
+          <p>Click for details!</p>
+        </div>
         <h3>${recipe.title}</h3>
       </div>
     `;

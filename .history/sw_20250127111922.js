@@ -23,10 +23,10 @@ const urlsToCache = [
   "/images/Nachos.jpeg", 
   "/images/Omelette.jpeg",
   "/images/Pancakes.jpeg",
-  "/images/Pizza.jpeg", 
+  "/images/Pizza.jpeg", // Add your images here
   "/images/Spaghetti Carbonara.jpeg",
   "/images/Smoothie Bowl.jpeg",
-  "/images/Steak.jpeg", 
+  "/images/Steak.jpeg", // Add your images here
   "/images/Tacos.jpeg",
   "/images/Vegetable Stir-fry.jpeg",
 ];

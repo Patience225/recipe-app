@@ -158,7 +158,8 @@ function displayRecipes(recipesToDisplay) {
     const recipeCard = `
       <div class="recipe-card" data-id="${recipe.id}">
         <img src="${recipe.image}" alt="${recipe.title}" loading="lazy">
-        <div class="card-back"> </div>
+        <div class="card-back">
+        </div>
         <h3>${recipe.title}</h3>
       </div>
     `;

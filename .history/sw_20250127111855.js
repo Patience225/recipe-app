@@ -17,16 +17,16 @@ const urlsToCache = [
   "/images/Fruit Salad.jpeg",
   "/images/Grilled Chicken.jpeg",
   "/images/Grilled Salmon.jpeg",
-  "/images/Ice Cream Sundae.jpeg",
+  "/images/Ice Cream Sundae.jpeg", // Add your images here
   "/images/Lobster Tail.jpeg",
   "/images/Muffins.jpeg",
-  "/images/Nachos.jpeg", 
+  "/images/Nachos.jpeg", // Add your images here
   "/images/Omelette.jpeg",
   "/images/Pancakes.jpeg",
-  "/images/Pizza.jpeg", 
+  "/images/Pizza.jpeg", // Add your images here
   "/images/Spaghetti Carbonara.jpeg",
   "/images/Smoothie Bowl.jpeg",
-  "/images/Steak.jpeg", 
+  "/images/Steak.jpeg", // Add your images here
   "/images/Tacos.jpeg",
   "/images/Vegetable Stir-fry.jpeg",
 ];
