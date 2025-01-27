@@ -79,7 +79,7 @@ function displayRecipes(recipesToDisplay) {
       });
   
       // Update displayRecipes to add lazy loading to images
-        
+        (recipesToDisplay) {
            recipeList.innerHTML = ""; // Clear the list
             recipesToDisplay.forEach((recipe) => {
     const recipeCard = `
@@ -93,6 +93,9 @@ function displayRecipes(recipesToDisplay) {
     `;
     recipeList.innerHTML += recipeCard;
   });
+}
+
+
 }
 
 // Initial display of all recipes

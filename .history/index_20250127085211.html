@@ -40,60 +40,13 @@
     <!-- Dynamic recipe cards will appear here -->
   </section>
 
-<!-- Modal for Recipe Details -->
-<div id="recipe-modal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn">&times;</span>
-    <h2 id="modal-title"> HELLO </h2>
-    <img id="modal-image" src="" alt="">
-    <p id="modal-description"></p>
-  </div>
-</div>
 
-<!-- Recipe Submission Form -->
-<div id="recipe-form-container">
-  <h2>Submit a Recipe</h2>
-  <form id="recipe-form">
-    <label for="recipe-title">Title:</label>
-    <input type="text" id="recipe-title" required>
-    
-    <label for="recipe-category">Category:</label>
-    <select id="recipe-category">
-      <option value="Breakfast">Breakfast</option>
-      <option value="Lunch">Lunch</option>
-      <option value="Dinner">Dinner</option>
-      <option value="Snacks">Snacks</option>
-    </select>
-
-    <label for="recipe-image">Image URL:</label>
-    <input type="url" id="recipe-image" required>
-    
-    <button type="submit">Submit Recipe</button>
-  </form>
-</div>
-
+  
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Recipe App | Made with ❤️ for IT Defense</p>
   </footer>
 
   <script src="script.js"></script>
-
-  <!-- Add this script to the end of your body tag -->
-<script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker.register("/sw.js").then(
-        (registration) => {
-          console.log("Service Worker registered with scope:", registration.scope);
-        },
-        (error) => {
-          console.log("Service Worker registration failed:", error);
-        }
-      );
-    });
-  }
-</script>
-
 </body>
 </html>

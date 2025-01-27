@@ -63,7 +63,8 @@ function displayRecipes(recipesToDisplay) {
       `;
       recipeList.innerHTML += recipeCard;
     });
-
+    
+    (recipesToDisplay) 
       recipeList.innerHTML = ""; // Clear the list
       recipesToDisplay.forEach((recipe) => {
         const recipeCard = `
@@ -77,22 +78,8 @@ function displayRecipes(recipesToDisplay) {
         `;
         recipeList.innerHTML += recipeCard;
       });
+    }    
   
-      // Update displayRecipes to add lazy loading to images
-        
-           recipeList.innerHTML = ""; // Clear the list
-            recipesToDisplay.forEach((recipe) => {
-    const recipeCard = `
-      <div class="recipe-card" data-id="${recipe.id}">
-        <img src="${recipe.image}" alt="${recipe.title}" loading="lazy">
-        <div class="card-back">
-          <p>Click for details!</p>
-        </div>
-        <h3>${recipe.title}</h3>
-      </div>
-    `;
-    recipeList.innerHTML += recipeCard;
-  });
 }
 
 // Initial display of all recipes
@@ -170,30 +157,4 @@ document.addEventListener("click", (e) => {
     const recipe = recipes.find((r) => r.id == recipeId);
     openModal(recipe);
   }
-});
-
-// Handle Recipe Submission
-const recipeForm = document.getElementById("recipe-form");
-
-recipeForm.addEventListener("submit", (e) => {
-  e.preventDefault(); // Prevent form from submitting the default way
-
-  const title = document.getElementById("recipe-title").value;
-  const category = document.getElementById("recipe-category").value;
-  const image = document.getElementById("recipe-image").value;
-
-  // Create a new recipe object
-  const newRecipe = {
-    id: recipes.length + 1,
-    title: title,
-    category: category,
-    image: image,
-  };
-
-  // Add new recipe to the array and display it
-  recipes.push(newRecipe);
-  displayRecipes(recipes);
-
-  // Clear the form after submission
-  recipeForm.reset();
 });

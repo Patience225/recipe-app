@@ -95,6 +95,9 @@ function displayRecipes(recipesToDisplay) {
   });
 }
 
+
+}
+
 // Initial display of all recipes
 displayRecipes(recipes);
 

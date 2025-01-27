@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Recipe App</h1>
+      <input type="text" id="search" placeholder="Search recipes...">
+      <button id="theme-toggle">🌙</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Categories -->
+    <section id="categories">
+      <h2>Categories</h2>
+      <div class="category-buttons">
+        <button data-category="All">All</button>
+        <button data-category="Breakfast">Breakfast</button>
+        <button data-category="Lunch">Lunch</button>
+        <button data-category="Dinner">Dinner</button>
+        <button data-category="Snacks">Snacks</button>
+      </div>
+    </section>
+
+    <!-- Recipe List -->
+    <section id="recipe-list">
+      <!-- Dynamic recipe cards will be inserted here -->
+    </section>
+
+    <!-- Recipe Details -->
+    <section id="recipe-details" class="hidden">
+      <!-- Detailed recipe content will be dynamically added here -->
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Recipe App | Made with ❤️ for IT Defense</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+  <!-- Add this script to the end of your body tag -->
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("/sw.js").then(
+        (registration) => {
+          console.log("Service Worker registered with scope:", registration.scope);
+        },
+        (error) => {
+          console.log("Service Worker registration failed:", error);
+        }
+      );
+    });
+  }
+</script>
+</body>
+</html>

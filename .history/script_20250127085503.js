@@ -78,21 +78,8 @@ function displayRecipes(recipesToDisplay) {
         recipeList.innerHTML += recipeCard;
       });
   
-      // Update displayRecipes to add lazy loading to images
-        
-           recipeList.innerHTML = ""; // Clear the list
-            recipesToDisplay.forEach((recipe) => {
-    const recipeCard = `
-      <div class="recipe-card" data-id="${recipe.id}">
-        <img src="${recipe.image}" alt="${recipe.title}" loading="lazy">
-        <div class="card-back">
-          <p>Click for details!</p>
-        </div>
-        <h3>${recipe.title}</h3>
-      </div>
-    `;
-    recipeList.innerHTML += recipeCard;
-  });
+
+      
 }
 
 // Initial display of all recipes

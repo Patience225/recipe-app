@@ -7,13 +7,13 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #efebe9, #d7ccc8); /* Light coffee gradient */
-  color: #4e342e;
+  background: linear-gradient(to right, #3e2723, #6d4c41); /* Coffee gradient */
+  color: #f3e5f5;
   line-height: 1.6;
 }
 
 header {
-  background: linear-gradient(135deg, #795548, #3e2723); /* Dark coffee gradient */
+  background: linear-gradient(135deg, #6d4c41, #3e2723); /* Coffee gradient */
   text-align: center;
   color: #fff;
   padding: 2rem;
@@ -33,23 +33,23 @@ header input {
   outline: none;
   width: 80%;
   max-width: 400px;
-  background: #efebe9; /* Light coffee */
-  color: #4e342e;
+  background: #f3e5ab;
+  color: #3e2723;
 }
 
 header #theme-toggle {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   border: none;
-  background: #d7ccc8; /* Light coffee */
+  background: #d7ccc8;
   color: #3e2723;
   border-radius: 20px;
   cursor: pointer;
 }
 
 .hero {
-  background: linear-gradient(135deg, rgba(121, 85, 72, 0.9), rgba(62, 39, 35, 0.9)); /* Blend of light and dark coffee */
-  color: #efebe9; /* Light coffee text */
+  background: linear-gradient(135deg, rgba(62, 39, 35, 0.8), rgba(109, 76, 65, 0.8)); /* Coffee gradient */
+  color: white;
   text-align: center;
   padding: 3rem 2rem;
   margin-top: -1rem;
@@ -68,16 +68,12 @@ header #theme-toggle {
 
 .hero button {
   padding: 0.8rem 1.5rem;
-  background-color: #5d4037; /* Medium coffee */
+  background-color: #795548;
   color: white;
   border: none;
   border-radius: 20px;
   font-size: 1rem;
   cursor: pointer;
-}
-
-.hero button:hover {
-  background-color: #4e342e; /* Darker tone for hover effect */
 }
 
 #categories {
@@ -88,7 +84,7 @@ header #theme-toggle {
 .category-buttons button {
   margin: 0.5rem;
   padding: 0.8rem 1.5rem;
-  background-color: #8d6e63; /* Light-medium coffee */
+  background-color: #6d4c41;
   color: white;
   border: none;
   border-radius: 20px;
@@ -96,7 +92,7 @@ header #theme-toggle {
 }
 
 .category-buttons button:hover {
-  background-color: #6d4c41; /* Darker coffee */
+  background-color: #5d4037;
 }
 
 #recipe-list {
@@ -107,7 +103,7 @@ header #theme-toggle {
 }
 
 .recipe-card {
-  background: rgba(236, 224, 216, 0.8); /* Light coffee tone */
+  background: rgba(121, 85, 72, 0.8); /* Coffee tone */
   backdrop-filter: blur(10px);
   border-radius: 15px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
@@ -124,7 +120,7 @@ header #theme-toggle {
 .recipe-card h3 {
   padding: 1rem;
   font-size: 1.2rem;
-  color: #4e342e; /* Dark coffee text */
+  color: white;
 }
 
 .recipe-card:hover {
@@ -134,7 +130,7 @@ header #theme-toggle {
 footer {
   text-align: center;
   padding: 1.5rem;
-  background: #3e2723; /* Dark coffee */
+  background: #5d4037; /* Coffee tone */
   color: white;
   margin-top: 2rem;
 }
@@ -146,15 +142,15 @@ body.dark-theme {
 }
 
 body.dark-theme header {
-  background: linear-gradient(135deg, #4e342e, #3e2723); /* Rich dark coffee tones */
+  background: linear-gradient(135deg, #3e2723, #6d4c41); /* Coffee gradient */
 }
 
 body.dark-theme .hero {
-  background: linear-gradient(135deg, rgba(62, 39, 35, 0.9), rgba(33, 33, 33, 0.9));
+  background: linear-gradient(135deg, rgba(33, 33, 33, 0.8), rgba(62, 39, 35, 0.8));
 }
 
 body.dark-theme .recipe-card {
-  background: rgba(62, 39, 35, 0.8); /* Dark coffee */
+  background: rgba(62, 39, 35, 0.7);
 }
 
 body.dark-theme footer {
@@ -165,7 +161,7 @@ body.dark-theme footer {
 #recipe-form-container {
   margin: 20px 0;
   padding: 20px;
-  background-color: #efebe9; /* Light coffee */
+  background-color: #f3e5ab;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -181,17 +177,17 @@ body.dark-theme footer {
 #recipe-form button {
   padding: 10px;
   font-size: 1rem;
-  border: 1px solid #d7ccc8; /* Light coffee border */
+  border: 1px solid #ddd;
   border-radius: 5px;
 }
 
 #recipe-form button {
-  background-color: #6d4c41; /* Medium coffee */
+  background-color: #6d4c41;
   color: white;
   cursor: pointer;
   border: none;
 }
 
 #recipe-form button:hover {
-  background-color: #5d4037; /* Darker coffee */
+  background-color: #5d4037;
 }

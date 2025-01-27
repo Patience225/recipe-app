@@ -7,15 +7,15 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #efebe9, #d7ccc8); /* Light coffee gradient */
-  color: #4e342e;
+  background: linear-gradient(to right, #f9f9f9, #f0f0f0);
+  color: #333;
   line-height: 1.6;
 }
 
 header {
-  background: linear-gradient(135deg, #795548, #3e2723); /* Dark coffee gradient */
+  background: linear-gradient(135deg, #f4a261, #e76f51);
   text-align: center;
-  color: #fff;
+  color: white;
   padding: 2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -33,23 +33,21 @@ header input {
   outline: none;
   width: 80%;
   max-width: 400px;
-  background: #efebe9; /* Light coffee */
-  color: #4e342e;
 }
 
 header #theme-toggle {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   border: none;
-  background: #d7ccc8; /* Light coffee */
-  color: #3e2723;
+  background: white;
+  color: #e76f51;
   border-radius: 20px;
   cursor: pointer;
 }
 
 .hero {
-  background: linear-gradient(135deg, rgba(121, 85, 72, 0.9), rgba(62, 39, 35, 0.9)); /* Blend of light and dark coffee */
-  color: #efebe9; /* Light coffee text */
+  background: linear-gradient(135deg, rgba(244, 162, 97, 0.8), rgba(231, 111, 81, 0.8));
+  color: white;
   text-align: center;
   padding: 3rem 2rem;
   margin-top: -1rem;
@@ -68,16 +66,12 @@ header #theme-toggle {
 
 .hero button {
   padding: 0.8rem 1.5rem;
-  background-color: #5d4037; /* Medium coffee */
+  background-color: #2a9d8f;
   color: white;
   border: none;
   border-radius: 20px;
   font-size: 1rem;
   cursor: pointer;
-}
-
-.hero button:hover {
-  background-color: #4e342e; /* Darker tone for hover effect */
 }
 
 #categories {
@@ -88,7 +82,7 @@ header #theme-toggle {
 .category-buttons button {
   margin: 0.5rem;
   padding: 0.8rem 1.5rem;
-  background-color: #8d6e63; /* Light-medium coffee */
+  background-color: #2a9d8f;
   color: white;
   border: none;
   border-radius: 20px;
@@ -96,7 +90,7 @@ header #theme-toggle {
 }
 
 .category-buttons button:hover {
-  background-color: #6d4c41; /* Darker coffee */
+  background-color: #21867a;
 }
 
 #recipe-list {
@@ -107,7 +101,7 @@ header #theme-toggle {
 }
 
 .recipe-card {
-  background: rgba(236, 224, 216, 0.8); /* Light coffee tone */
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
   border-radius: 15px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
@@ -124,7 +118,6 @@ header #theme-toggle {
 .recipe-card h3 {
   padding: 1rem;
   font-size: 1.2rem;
-  color: #4e342e; /* Dark coffee text */
 }
 
 .recipe-card:hover {
@@ -134,38 +127,136 @@ header #theme-toggle {
 footer {
   text-align: center;
   padding: 1.5rem;
-  background: #3e2723; /* Dark coffee */
+  background: #2a9d8f;
   color: white;
   margin-top: 2rem;
 }
 
+/* Recipe Card Flip Effect */
+.recipe-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  height: 300px;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s;
+}
+
+.recipe-card h3 {
+  padding: 1rem;
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 2;
+  color: #fff;
+}
+
+/* Flip the card */
+.recipe-card:hover {
+  transform: rotateY(180deg);
+}
+
+/* Back side of the card */
+.recipe-card .card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+
 /* Dark Theme Styles */
 body.dark-theme {
-  background: #212121;
+  background: #121212;
   color: white;
 }
 
 body.dark-theme header {
-  background: linear-gradient(135deg, #4e342e, #3e2723); /* Rich dark coffee tones */
+  background: linear-gradient(135deg, #222, #444);
 }
 
 body.dark-theme .hero {
-  background: linear-gradient(135deg, rgba(62, 39, 35, 0.9), rgba(33, 33, 33, 0.9));
+  background: linear-gradient(135deg, rgba(34, 34, 34, 0.8), rgba(51, 51, 51, 0.8));
 }
 
 body.dark-theme .recipe-card {
-  background: rgba(62, 39, 35, 0.8); /* Dark coffee */
+  background: rgba(0, 0, 0, 0.7);
 }
 
 body.dark-theme footer {
-  background: #3e2723;
+  background: #333;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* Recipe Submission Form Styles */
 #recipe-form-container {
   margin: 20px 0;
   padding: 20px;
-  background-color: #efebe9; /* Light coffee */
+  background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -181,17 +272,17 @@ body.dark-theme footer {
 #recipe-form button {
   padding: 10px;
   font-size: 1rem;
-  border: 1px solid #d7ccc8; /* Light coffee border */
+  border: 1px solid #ddd;
   border-radius: 5px;
 }
 
 #recipe-form button {
-  background-color: #6d4c41; /* Medium coffee */
+  background-color: #4CAF50;
   color: white;
   cursor: pointer;
   border: none;
 }
 
 #recipe-form button:hover {
-  background-color: #5d4037; /* Darker coffee */
+  background-color: #45a049;
 }
