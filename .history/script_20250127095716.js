@@ -147,6 +147,7 @@ const recipes = [
   },
 ];
 
+
 // DOM Elements
 const recipeList = document.getElementById("recipe-list");
 const searchInput = document.getElementById("search");

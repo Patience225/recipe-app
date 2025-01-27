@@ -169,6 +169,28 @@ function displayRecipes(recipesToDisplay) {
   });
 }
 
+// DOM Elements
+const recipeList = document.getElementById("recipe-list");
+const searchInput = document.getElementById("search");
+const categoryButtons = document.querySelectorAll(".category-buttons button");
+
+// Function to display recipes
+function displayRecipes(recipesToDisplay) {
+  recipeList.innerHTML = ""; // Clear the list
+  recipesToDisplay.forEach((recipe) => {
+    const recipeCard = `
+      <div class="recipe-card" data-id="${recipe.id}">
+        <img src="${recipe.image}" alt="${recipe.title}" loading="lazy">
+        <div class="card-back">
+          <p>Click for details!</p>
+        </div>
+        <h3>${recipe.title}</h3>
+      </div>
+    `;
+    recipeList.innerHTML += recipeCard;
+  });
+}
+
 // Initial display of all recipes
 displayRecipes(recipes);
 

@@ -30,121 +30,6 @@ const recipes = [
     category: "Breakfast",
     image: "https://source.unsplash.com/400x300/?avocado",
   },
-  {
-    id: 6,
-    title: "Caesar Salad",
-    category: "Lunch",
-    image: "https://source.unsplash.com/400x300/?salad",
-  },
-  {
-    id: 7,
-    title: "Burgers",
-    category: "Dinner",
-    image: "https://source.unsplash.com/400x300/?burger",
-  },
-  {
-    id: 8,
-    title: "Muffins",
-    category: "Breakfast",
-    image: "https://source.unsplash.com/400x300/?muffins",
-  },
-  {
-    id: 9,
-    title: "Chocolate Cake",
-    category: "Snacks",
-    image: "https://source.unsplash.com/400x300/?cake",
-  },
-  {
-    id: 10,
-    title: "Tacos",
-    category: "Lunch",
-    image: "https://source.unsplash.com/400x300/?tacos",
-  },
-  {
-    id: 11,
-    title: "Grilled Salmon",
-    category: "Dinner",
-    image: "https://source.unsplash.com/400x300/?salmon",
-  },
-  {
-    id: 12,
-    title: "Smoothie Bowl",
-    category: "Breakfast",
-    image: "https://source.unsplash.com/400x300/?smoothie",
-  },
-  {
-    id: 13,
-    title: "Chicken Wraps",
-    category: "Lunch",
-    image: "https://source.unsplash.com/400x300/?wraps",
-  },
-  {
-    id: 14,
-    title: "Pizza",
-    category: "Dinner",
-    image: "https://source.unsplash.com/400x300/?pizza",
-  },
-  {
-    id: 15,
-    title: "Churros",
-    category: "Snacks",
-    image: "https://source.unsplash.com/400x300/?churros",
-  },
-  {
-    id: 16,
-    title: "Croissants",
-    category: "Breakfast",
-    image: "https://source.unsplash.com/400x300/?croissant",
-  },
-  {
-    id: 17,
-    title: "Vegetable Stir-fry",
-    category: "Lunch",
-    image: "https://source.unsplash.com/400x300/?stirfry",
-  },
-  {
-    id: 18,
-    title: "Steak",
-    category: "Dinner",
-    image: "https://source.unsplash.com/400x300/?steak",
-  },
-  {
-    id: 19,
-    title: "Ice Cream Sundae",
-    category: "Snacks",
-    image: "https://source.unsplash.com/400x300/?icecream",
-  },
-  {
-    id: 20,
-    title: "Omelette",
-    category: "Breakfast",
-    image: "https://source.unsplash.com/400x300/?omelette",
-  },
-  // Additional 7 items
-  {
-    id: 21,
-    title: "Burrito Bowl",
-    category: "Lunch",
-    image: "https://source.unsplash.com/400x300/?burrito",
-  },
-  {
-    id: 22,
-    title: "Lobster Tail",
-    category: "Dinner",
-    image: "https://source.unsplash.com/400x300/?lobster",
-  },
-  {
-    id: 23,
-    title: "Nachos",
-    category: "Snacks",
-    image: "https://source.unsplash.com/400x300/?nachos",
-  },
-  {
-    id: 24,
-    title: "French Toast",
-    category: "Breakfast",
-    image: "https://source.unsplash.com/400x300/?frenchtoast",
-  },
 ];
 
 // DOM Elements
@@ -156,6 +41,47 @@ const categoryButtons = document.querySelectorAll(".category-buttons button");
 function displayRecipes(recipesToDisplay) {
   recipeList.innerHTML = ""; // Clear the list
   recipesToDisplay.forEach((recipe) => {
+    const recipeCard = `
+      <div class="recipe-card">
+        <img src="${recipe.image}" alt="${recipe.title}">
+        <h3>${recipe.title}</h3>
+      </div>
+    `;
+    recipeList.innerHTML += recipeCard;
+  });
+  
+    recipeList.innerHTML = ""; // Clear the list
+    recipesToDisplay.forEach((recipe) => {
+      const recipeCard = `
+        <div class="recipe-card">
+          <img src="${recipe.image}" alt="${recipe.title}">
+          <div class="card-back">
+            <p>Click for details!</p>
+          </div>
+          <h3>${recipe.title}</h3>
+        </div>
+      `;
+      recipeList.innerHTML += recipeCard;
+    });
+
+      recipeList.innerHTML = ""; // Clear the list
+      recipesToDisplay.forEach((recipe) => {
+        const recipeCard = `
+          <div class="recipe-card" data-id="${recipe.id}">
+            <img src="${recipe.image}" alt="${recipe.title}">
+            <div class="card-back">
+              <p>Click for details!</p>
+            </div>
+            <h3>${recipe.title}</h3>
+          </div>
+        `;
+        recipeList.innerHTML += recipeCard;
+      });
+  
+      // Update displayRecipes to add lazy loading to images
+        
+           recipeList.innerHTML = ""; // Clear the list
+            recipesToDisplay.forEach((recipe) => {
     const recipeCard = `
       <div class="recipe-card" data-id="${recipe.id}">
         <img src="${recipe.image}" alt="${recipe.title}" loading="lazy">
@@ -201,6 +127,7 @@ const themeToggleBtn = document.getElementById("theme-toggle");
 
 themeToggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-theme");
+  // Change button icon based on the theme
   if (document.body.classList.contains("dark-theme")) {
     themeToggleBtn.textContent = "🌞 Light Mode";
   } else {
@@ -229,6 +156,7 @@ closeBtn.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
+// Close the modal if clicked outside the content area
 window.addEventListener("click", (e) => {
   if (e.target === modal) {
     modal.style.display = "none";
@@ -248,12 +176,13 @@ document.addEventListener("click", (e) => {
 const recipeForm = document.getElementById("recipe-form");
 
 recipeForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+  e.preventDefault(); // Prevent form from submitting the default way
 
   const title = document.getElementById("recipe-title").value;
   const category = document.getElementById("recipe-category").value;
   const image = document.getElementById("recipe-image").value;
 
+  // Create a new recipe object
   const newRecipe = {
     id: recipes.length + 1,
     title: title,
@@ -261,7 +190,10 @@ recipeForm.addEventListener("submit", (e) => {
     image: image,
   };
 
+  // Add new recipe to the array and display it
   recipes.push(newRecipe);
   displayRecipes(recipes);
+
+  // Clear the form after submission
   recipeForm.reset();
 });
