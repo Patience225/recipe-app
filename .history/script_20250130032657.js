@@ -544,7 +544,6 @@ const recipes = [
         "Serve with syrup."
       ]
     }
-    
   ];  
 
 const displayRecipes = (recipes) => {

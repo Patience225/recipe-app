@@ -273,278 +273,85 @@ const recipes = [
       title: "Grilled Salmon",
       category: "Dinner",
       image: "images/Grilled Salmon.jpeg",
-      ingredients: [
-        "2 salmon fillets",
-        "1 tablespoon olive oil",
-        "1 teaspoon lemon juice",
-        "1 teaspoon garlic powder",
-        "½ teaspoon salt",
-        "½ teaspoon black pepper",
-        "1 teaspoon dried oregano"
-      ],
-      preparation: [
-        "Preheat grill to medium-high heat.",
-        "Rub salmon fillets with olive oil, lemon juice, garlic powder, salt, pepper, and oregano.",
-        "Place salmon on the grill and cook for 4-5 minutes per side until cooked through.",
-        "Serve with steamed vegetables or rice."
-      ]
     },
     {
       id: 12,
       title: "Smoothie Bowl",
       category: "Breakfast",
       image: "images/Smoothie Bowl.jpeg",
-      ingredients: [
-        "1 banana",
-        "½ cup frozen berries",
-        "½ cup Greek yogurt",
-        "¼ cup milk",
-        "1 tablespoon honey",
-        "¼ cup granola",
-        "1 tablespoon chia seeds"
-      ],
-      preparation: [
-        "Blend banana, frozen berries, Greek yogurt, milk, and honey until smooth.",
-        "Pour into a bowl and top with granola and chia seeds.",
-        "Serve immediately."
-      ]
     },
     {
       id: 13,
       title: "Chicken Wraps",
       category: "Lunch",
       image: "images/Chicken Wraps.jpeg",
-      ingredients: [
-        "2 large tortillas",
-        "1 cup cooked shredded chicken",
-        "½ cup lettuce, chopped",
-        "¼ cup diced tomatoes",
-        "¼ cup shredded cheese",
-        "2 tablespoons mayonnaise or yogurt",
-        "1 teaspoon mustard"
-      ],
-      preparation: [
-        "Mix chicken, mayonnaise, and mustard in a bowl.",
-        "Lay out tortillas and add lettuce, tomatoes, chicken mixture, and cheese.",
-        "Wrap tightly and slice in half before serving."
-      ]
     },
     {
       id: 14,
       title: "Pizza",
       category: "Dinner",
       image: "images/Pizza.jpeg",
-      ingredients: [
-        "1 pre-made pizza dough",
-        "½ cup pizza sauce",
-        "1 cup shredded mozzarella cheese",
-        "½ cup sliced pepperoni",
-        "½ teaspoon dried oregano"
-      ],
-      preparation: [
-        "Preheat oven to 450°F (230°C).",
-        "Roll out pizza dough and place on a baking tray.",
-        "Spread pizza sauce evenly, add cheese, and top with pepperoni.",
-        "Sprinkle oregano and bake for 12-15 minutes until cheese is melted and crust is golden."
-      ]
     },
     {
       id: 15,
       title: "Churros",
       category: "Snacks",
       image: "images/Churros.jpeg",
-      ingredients: [
-        "1 cup water",
-        "2 tablespoons sugar",
-        "2 tablespoons butter",
-        "1 cup all-purpose flour",
-        "1 egg",
-        "½ teaspoon cinnamon",
-        "Vegetable oil for frying",
-        "½ cup sugar for coating"
-      ],
-      preparation: [
-        "Boil water, sugar, and butter in a pan.",
-        "Stir in flour and mix until a dough forms.",
-        "Let cool, then add egg and mix well.",
-        "Heat oil in a pan and pipe the dough into the hot oil.",
-        "Fry until golden brown, then roll in sugar and cinnamon."
-      ]
     },
     {
       id: 16,
       title: "Croissants",
       category: "Breakfast",
       image: "images/Croissants.jpeg",
-      ingredients: [
-        "2 cups all-purpose flour",
-        "1 tablespoon sugar",
-        "½ teaspoon salt",
-        "½ cup butter, cold and cubed",
-        "½ cup milk",
-        "1 egg yolk"
-      ],
-      preparation: [
-        "Mix flour, sugar, and salt in a bowl.",
-        "Cut in butter until crumbly, then add milk and mix until dough forms.",
-        "Roll out and fold multiple times, then cut into triangles and roll into croissant shapes.",
-        "Brush with egg yolk and bake at 375°F (190°C) for 20 minutes until golden."
-      ]
     },
     {
       id: 17,
       title: "Vegetable Stir-fry",
       category: "Lunch",
       image: "images/Vegetable Stir-fry.jpeg",
-      ingredients: [
-        "1 cup broccoli florets",
-        "1 carrot, sliced",
-        "1 bell pepper, sliced",
-        "1 tablespoon soy sauce",
-        "1 tablespoon olive oil",
-        "1 teaspoon garlic, minced"
-      ],
-      preparation: [
-        "Heat olive oil in a pan over medium heat.",
-        "Add garlic and sauté for 30 seconds.",
-        "Add vegetables and stir-fry for 5-7 minutes.",
-        "Drizzle with soy sauce and serve with rice."
-      ]
     },
     {
       id: 18,
       title: "Steak",
       category: "Dinner",
       image: "images/Steak.jpeg",
-      ingredients: [
-        "2 ribeye steaks",
-        "1 tablespoon olive oil",
-        "1 teaspoon salt",
-        "½ teaspoon black pepper",
-        "1 teaspoon garlic powder",
-        "1 teaspoon butter"
-      ],
-      preparation: [
-        "Rub steaks with olive oil, salt, pepper, and garlic powder.",
-        "Heat a pan to high and cook steaks for 3-4 minutes per side for medium-rare.",
-        "Add butter to pan and baste steak for an extra minute.",
-        "Let rest for 5 minutes before serving."
-      ]
     },
     {
       id: 19,
       title: "Ice Cream Sundae",
       category: "Snacks",
       image: "images/Ice Cream Sundae.jpeg",
-      ingredients: [
-        "2 scoops vanilla ice cream",
-        "¼ cup chocolate syrup",
-        "¼ cup chopped nuts",
-        "1 cherry",
-        "Whipped cream"
-      ],
-      preparation: [
-        "Scoop ice cream into a bowl.",
-        "Drizzle with chocolate syrup.",
-        "Top with whipped cream, nuts, and a cherry."
-      ]
     },
     {
       id: 20,
       title: "Omelette",
       category: "Breakfast",
       image: "images/Omelette.jpeg",
-      ingredients: [
-        "2 eggs",
-        "¼ cup diced bell peppers",
-        "¼ cup diced onions",
-        "¼ cup shredded cheese",
-        "1 teaspoon butter",
-        "Salt and pepper to taste"
-      ],
-      preparation: [
-        "Beat eggs with salt and pepper.",
-        "Heat butter in a pan and add eggs.",
-        "Add bell peppers, onions, and cheese on top.",
-        "Cook for 3-4 minutes, then fold in half and serve."
-      ]
     },
     {
       id: 21,
       title: "Burrito Bowl",
       category: "Lunch",
       image: "images/Burrito Bowl.jpeg",
-      ingredients: [
-        "1 cup cooked rice",
-        "½ cup black beans",
-        "½ cup cooked chicken, shredded",
-        "¼ cup salsa",
-        "¼ cup shredded cheese",
-        "1 tablespoon sour cream"
-      ],
-      preparation: [
-        "Layer rice, black beans, and chicken in a bowl.",
-        "Top with salsa, cheese, and sour cream before serving."
-      ]
     },
     {
       id: 22,
       title: "Lobster Tail",
       category: "Dinner",
       image: "images/Lobster Tail.jpeg",
-      ingredients: [
-        "2 lobster tails",
-        "2 tablespoons butter",
-        "1 teaspoon garlic, minced",
-        "1 teaspoon lemon juice",
-        "Salt and pepper to taste"
-      ],
-      preparation: [
-        "Preheat oven to 375°F (190°C).",
-        "Cut the top shell of the lobster and lift the meat slightly.",
-        "Mix butter, garlic, and lemon juice, then spread over lobster meat.",
-        "Bake for 12-15 minutes until cooked through."
-      ]
     },
     {
       id: 23,
       title: "Nachos",
       category: "Snacks",
       image: "images/Nachos.jpeg",
-      ingredients: [
-        "1 bag tortilla chips",
-        "½ cup shredded cheese",
-        "¼ cup salsa",
-        "¼ cup sour cream",
-        "¼ cup sliced jalapeños"
-      ],
-      preparation: [
-        "Preheat oven to 350°F (175°C).",
-        "Spread tortilla chips on a baking sheet.",
-        "Top with cheese and bake for 5 minutes until melted.",
-        "Serve with salsa, sour cream, and jalapeños."
-      ]
     },
     {
       id: 24,
       title: "French Toast",
       category: "Breakfast",
       image: "images/French Toast.jpeg",
-      ingredients: [
-        "2 slices bread",
-        "1 egg",
-        "¼ cup milk",
-        "1 teaspoon vanilla extract",
-        "1 teaspoon cinnamon",
-        "1 tablespoon butter"
-      ],
-      preparation: [
-        "Whisk egg, milk, vanilla, and cinnamon in a bowl.",
-        "Dip bread in mixture and cook on a buttered pan for 2-3 minutes per side.",
-        "Serve with syrup."
-      ]
-    }
-    
+    },
   ];  
 
 const displayRecipes = (recipes) => {
